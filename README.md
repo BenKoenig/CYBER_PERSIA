@@ -13,6 +13,7 @@ Cyber Persia ist ein kommendes Einzelspieler-Kampfspiel. Es basiert auf der Unre
  - [Next.js](https://nextjs.org/)
  - [Laravel](https://laravel.com/)
  - [TailwindCSS](https://tailwindcss.com/)
+ - [Three.js](https://threejs.org/)
  - [Stripe](https://stripe.com)
  - [Vercel](https://vercel.com/)
  - [Laravel Forge](https://forge.laravel.com/)
