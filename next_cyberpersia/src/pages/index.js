@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/auth'
+import {checkout} from "../../checkout";
 
 export default function Home() {
     const { user } = useAuth({ middleware: 'guest' })
@@ -63,11 +64,19 @@ export default function Home() {
                                     </svg>
 
                                     <div className="ml-4 text-lg leading-7 font-semibold">
-                                        <a
-                                            href="https://laravel.com/docs"
+                                        <button onClick={(() => {
+                                            checkout({
+                                                lineItems: [
+                                                    {
+                                                        price: `${process.env.NEXT_PUBLIC_PRODUCT}`,
+                                                        quantity: 1
+                                                    }
+                                                ]
+                                            })
+                                        })}
                                             className="underline text-gray-900 dark:text-white">
-                                            Documentation
-                                        </a>
+                                            Buy Game
+                                        </button>
                                     </div>
                                 </div>
 
