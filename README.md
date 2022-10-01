@@ -1,4 +1,4 @@
-# Cyber Persia
+# CYBER PERSIA
 
 **EN**
 
