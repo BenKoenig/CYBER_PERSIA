@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/auth'
-import {checkout} from "../../checkout";
+import {checkout} from "../checkout";
 
 export default function Home() {
     const { user } = useAuth({ middleware: 'guest' })
