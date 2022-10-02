@@ -27,7 +27,7 @@ git clone https://github.com/BenKoenig/CYBER_PERSIA.git
 
 ### Setup Next Project
 ```
-cd next_cyberpersia
+cd next
 npm i
 mv .env.example .env.local
 npm run dev
@@ -35,7 +35,7 @@ npm run dev
 
 ### Setup Laravel Project
 ```
-cd laravel_cyberpersia (or cd ../laravel_cyberpersia)
+cd laravel (or cd ../laravel)
 composer i
 mv .env.example .env
 php artisan migrate
