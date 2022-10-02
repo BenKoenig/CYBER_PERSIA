@@ -24,6 +24,10 @@ class User extends Authenticatable
         'purchased_game'
     ];
 
+    protected $attributes = [
+        'purchased_game' => false,
+    ];
+
     /**
      * The attributes that should be hidden for serialization.
      *
