@@ -31,7 +31,7 @@ const Dashboard = () => {
                                     }
                                 ]
                             })
-                        })} className="underline text-gray-900 dark:text-white">
+                        })} className="underline text-gray-900 ">
                             Buy Game
                         </button>
                     </div>
