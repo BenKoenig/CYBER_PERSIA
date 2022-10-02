@@ -21,19 +21,6 @@ const Dashboard = () => {
                         <div className="p-6 bg-white border-b border-gray-200">
                             You're logged in!
                         </div>
-
-                        <button onClick={(() => {
-                            checkout({
-                                lineItems: [
-                                    {
-                                        price: `${process.env.NEXT_PUBLIC_PRODUCT}`,
-                                        quantity: 1
-                                    }
-                                ]
-                            })
-                        })} className="underline text-gray-900 ">
-                            Buy Game
-                        </button>
                     </div>
                 </div>
             </div>

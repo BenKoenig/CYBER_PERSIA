@@ -2,12 +2,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/auth'
 import {checkout} from "../checkout";
+import GuestLayout from "@/components/Layouts/GuestLayout";
 
 export default function Home() {
     const { user } = useAuth({ middleware: 'guest' })
 
     return (
-        <>
+        <GuestLayout>
             <Head>
                 <title>Laravel</title>
             </Head>
@@ -295,6 +296,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </>
+        </GuestLayout>
     )
 }

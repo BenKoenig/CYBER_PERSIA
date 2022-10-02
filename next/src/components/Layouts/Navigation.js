@@ -7,13 +7,18 @@ import { DropdownButton } from '@/components/DropdownLink'
 import { useAuth } from '@/hooks/auth'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
+import Button from "@/components/Button";
+import {checkout} from "@/checkout";
 
-const Navigation = ({ user }) => {
+const Navigation = () => {
+    const { user } = useAuth({ middleware: 'auth' })
+
     const router = useRouter()
 
     const { logout } = useAuth()
 
     const [open, setOpen] = useState(false)
+
 
     return (
         <nav className="bg-white border-b border-gray-100">
@@ -23,7 +28,7 @@ const Navigation = ({ user }) => {
                     <div className="flex">
                         {/* Logo */}
                         <div className="flex-shrink-0 flex items-center">
-                            <Link href="/dashboard">
+                            <Link href="/">
                                 <a>
                                     <ApplicationLogo className="block h-10 w-auto fill-current text-gray-600" />
                                 </a>
@@ -42,33 +47,22 @@ const Navigation = ({ user }) => {
 
                     {/* Settings Dropdown */}
                     <div className="hidden sm:flex sm:items-center sm:ml-6">
-                        <Dropdown
-                            align="right"
-                            width="48"
-                            trigger={
-                                <button className="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 focus:outline-none transition duration-150 ease-in-out">
-                                    <div>{user?.name}</div>
 
-                                    <div className="ml-1">
-                                        <svg
-                                            className="fill-current h-4 w-4"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                    </div>
-                                </button>
-                            }>
+                        {/*import dropdown*/}
 
-                            {/* Authentication */}
-                            <DropdownButton onClick={logout}>
-                                Logout
-                            </DropdownButton>
-                        </Dropdown>
+                        {/*<Button className="ml-3"
+                                onClick={(() => {
+                                    checkout({
+                                        lineItems: [
+                                            {
+                                                price: `${process.env.NEXT_PUBLIC_PRODUCT}`,
+                                                quantity: 1
+                                            }
+                                        ]
+                                    })
+                                })}>
+                            Buy Game
+                        </Button>*/}
                     </div>
 
                     {/* Hamburger */}
@@ -134,22 +128,30 @@ const Navigation = ({ user }) => {
                                 </svg>
                             </div>
 
-                            <div className="ml-3">
-                                <div className="font-medium text-base text-gray-800">
-                                    {user?.name}
+                            {user ?
+                                <div className="ml-3">
+                                    <div className="font-medium text-base text-gray-800">
+                                        {user?.name}
+                                    </div>
+                                    <div className="font-medium text-sm text-gray-500">
+                                        {user?.email}
+                                    </div>
                                 </div>
-                                <div className="font-medium text-sm text-gray-500">
-                                    {user?.email}
-                                </div>
-                            </div>
+                            :
+                            <p>none</p>}
+
                         </div>
 
-                        <div className="mt-3 space-y-1">
-                            {/* Authentication */}
-                            <ResponsiveNavButton onClick={logout}>
-                                Logout
-                            </ResponsiveNavButton>
-                        </div>
+                        {user ?
+                            <div className="mt-3 space-y-1">
+                                {/* Authentication */}
+                                <ResponsiveNavButton onClick={logout}>
+                                    Logout
+                                </ResponsiveNavButton>
+                            </div>
+                        :
+                        <p>none</p>}
+
                     </div>
                 </div>
             )}

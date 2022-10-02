@@ -30,6 +30,44 @@ You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
+## Database Structure
+### Forums
+#### Threads
+- ID
+- User_ID
+- Titel
+- Text
+- Like_Count (int)
+- Dislike_Count (int)
+- Created_at (date)
+- Updated_at (date)
+
+### Comments
+- User_ID
+- Thread_ID
+- Text
+- Like_Count (int)
+- Dislike_Count (int)
+- Created_at (date)
+- Updated_at (date)
+
+### Users
+- ID
+- Email
+- Username
+- Profile_image_ID
+- Password
+- Email_veriefied_at
+- purchased_game (boolean)
+- purchased_at (date)
+- Created_at (date)
+- Updated_at (date)
+
+### Profile_Images
+- ID
+- Image
+- Created_at (date)
+- Updated_at (date)
 
 ## License
 
