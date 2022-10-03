@@ -13,10 +13,18 @@ export default function Home() {
                 <title>Laravel</title>
             </Head>
 
-            <div className="h-screen w-full bg-red-400 flex justify-center items-center -mt-16">
-                <div className="text-center">
-                    <h1 className="widest uppercase pb-4">Lorem ipsum dolar set</h1>
-                    <h2 className="uppercase font-bold text-6xl pb-4">Cyber Persia</h2>
+            <div className="h-screen w-full bg-red-400 flex justify-center items-center -mt-16 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full">
+                    <video src="/videos/temp.mp4" autoPlay muted loop>
+
+                    </video>
+                </div>
+                <div className="absolute top-0 left-0 w-full h-full bg-black/80"></div>
+
+
+                <div className="text-center relative text-white">
+                    <h1 className="tracking-widest uppercase pb-5">Lorem ipsum dolar set</h1>
+                    <h2 className="uppercase font-bold text-7xl pb-5">Cyber Persia</h2>
                     <p className="max-w-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </div>
             </div>
