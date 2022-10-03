@@ -90,7 +90,7 @@ const Navigation = () => {
                     </div>
 
                     {/* Responsive Settings Options */}
-                    <div className="pt-4 pb-1 border-t border-gray-200">
+                    <div className="pt-4 pb-1 border-t border-gray-200 bg-white">
                         <div className="flex items-center px-4">
                             <div className="flex-shrink-0">
                                 <svg
