@@ -23,9 +23,9 @@ export default function Home() {
 
 
                 <div className="text-center relative text-white">
-                    <h1 className="tracking-widest uppercase pb-5">Lorem ipsum dolar set</h1>
-                    <h2 className="uppercase font-bold text-7xl pb-5">Cyber Persia</h2>
-                    <p className="max-w-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p className="tracking-widest uppercase pb-5">Lorem ipsum dolar set</p>
+                    <h1 className="uppercase font-bold text-7xl pb-5">Cyber Persia</h1>
+                    <h2 className="max-w-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h2>
                 </div>
             </div>
         </GuestLayout>
