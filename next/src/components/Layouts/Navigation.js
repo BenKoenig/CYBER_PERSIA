@@ -1,27 +1,22 @@
 import ApplicationLogo from '@/components/ApplicationLogo'
-import Dropdown from '@/components/Dropdown'
 import Link from 'next/link'
 import NavLink from '@/components/NavLink'
-import ResponsiveNavLink, { ResponsiveNavButton } from '@/components/ResponsiveNavLink'
-import { DropdownButton } from '@/components/DropdownLink'
-import { useAuth } from '@/hooks/auth'
+import ResponsiveNavLink from '@/components/ResponsiveNavLink'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import Button from "@/components/Button";
-import {checkout} from "@/checkout";
+import LogoutDropdown from "@/components/Layouts/LogoutDropdown";
+import MobileDisplayUser from "@/components/Layouts/MobileDisplayUser";
+import MobileLogout from "@/components/Layouts/MobileLogout";
+import {useAuth} from "@/hooks/auth";
 
 const Navigation = () => {
-    const { user } = useAuth({ middleware: 'auth' })
-
     const router = useRouter()
-
-    const { logout } = useAuth()
-
     const [open, setOpen] = useState(false)
-
+    const { user } = useAuth({ middleware: 'guest' })
 
     return (
-        <nav className="bg-white border-b border-gray-100">
+
+        <nav className=" border-b border-gray-100 bg-white relative">
             {/* Primary Navigation Menu */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
@@ -47,22 +42,7 @@ const Navigation = () => {
 
                     {/* Settings Dropdown */}
                     <div className="hidden sm:flex sm:items-center sm:ml-6">
-
-                        {/*import dropdown*/}
-
-                        {/*<Button className="ml-3"
-                                onClick={(() => {
-                                    checkout({
-                                        lineItems: [
-                                            {
-                                                price: `${process.env.NEXT_PUBLIC_PRODUCT}`,
-                                                quantity: 1
-                                            }
-                                        ]
-                                    })
-                                })}>
-                            Buy Game
-                        </Button>*/}
+                        {user ? <LogoutDropdown /> : ""}
                     </div>
 
                     {/* Hamburger */}
@@ -128,30 +108,15 @@ const Navigation = () => {
                                 </svg>
                             </div>
 
-                            {user ?
-                                <div className="ml-3">
-                                    <div className="font-medium text-base text-gray-800">
-                                        {user?.name}
-                                    </div>
-                                    <div className="font-medium text-sm text-gray-500">
-                                        {user?.email}
-                                    </div>
-                                </div>
-                            :
-                            <p>none</p>}
-
+                            <div className="ml-3">
+                                {user ? <MobileDisplayUser /> : 0}
+                            </div>
                         </div>
 
-                        {user ?
-                            <div className="mt-3 space-y-1">
-                                {/* Authentication */}
-                                <ResponsiveNavButton onClick={logout}>
-                                    Logout
-                                </ResponsiveNavButton>
-                            </div>
-                        :
-                        <p>none</p>}
-
+                        <div className="mt-3 space-y-1">
+                            {/* Authentication */}
+                            {user ? <MobileLogout /> : ''}
+                        </div>
                     </div>
                 </div>
             )}
