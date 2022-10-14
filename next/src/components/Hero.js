@@ -13,7 +13,7 @@ const Hero = () => {
 
             <div className="absolute bottom-0 right-0  hidden xl:flex">
                 <div className="w-10 h-16 triangle-right bg-blue-300"></div>
-                <div className="w-10 bg-blue-300 w-56 h-16"></div>
+                <div className=" bg-blue-300 w-56 h-16"></div>
             </div>
 
 
