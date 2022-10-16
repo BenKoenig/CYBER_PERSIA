@@ -18,9 +18,9 @@ const Hero = () => {
 
 
             <div className="text-center relative text-white mx-4">
-                <p className="tracking-widest uppercase pb-3 lg:pb-5">Lorem ipsum dolar set</p>
-                <h1 className="uppercase font-bold text-5xl sm:text-6xl md:text-7xl pb-3 lg:pb-5">Cyber Persia</h1>
-                <h2 className="max-w-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h2>
+                <p className="sub-title">Lorem ipsum dolar set</p>
+                <h1 className="main-title">Cyber Persia</h1>
+                <h2 className="desc-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h2>
             </div>
         </div>
     )

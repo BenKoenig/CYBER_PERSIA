@@ -9,3 +9,15 @@
     100% 100%,
     0% 100%);
 }
+
+.sub-title {
+    @apply tracking-widest uppercase pb-3 lg:pb-5 text-center;
+}
+
+.main-title {
+    @apply uppercase font-bold text-5xl sm:text-6xl md:text-7xl pb-3 lg:pb-5 text-center;
+}
+
+.desc-title {
+    @apply max-w-2xl text-center;
+}

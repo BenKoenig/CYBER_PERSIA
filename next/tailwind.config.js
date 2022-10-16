@@ -8,6 +8,10 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'light-100': '#C0E8FF',
+                'light-50': '#DCF2FF'
+            }
         },
     },
     variants: {
