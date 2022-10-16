@@ -4,7 +4,7 @@ import { useAuth } from '@/hooks/auth'
 import {checkout} from "@/checkout";
 import GuestLayout from "@/components/Layouts/GuestLayout";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import About from "@/components/About/AboutGrid";
 
 export default function Home() {
     const { user } = useAuth({ middleware: 'guest' })
