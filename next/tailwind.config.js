@@ -5,9 +5,9 @@ module.exports = {
     darkMode: 'media',
     theme: {
         extend: {
-            fontFamily: {
+/*            fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-            },
+            },*/
             colors: {
                 'light-100': '#C0E8FF',
                 'light-50': '#DCF2FF'
