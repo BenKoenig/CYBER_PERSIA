@@ -12,7 +12,6 @@ const Hero = () => {
 
             <div className="flex justify-center">
                 <canvas className="max-w-[636px] w-full ">
-
                 </canvas>
             </div>
         </section>

@@ -16,7 +16,6 @@ const Hero = () => {
                 <div className=" bg-blue-300 w-56 h-16"></div>
             </div>
 
-
             <div className="text-center relative text-white mx-4">
                 <p className="sub-title">Lorem ipsum dolar set</p>
                 <h1 className="main-title">Cyber Persia</h1>

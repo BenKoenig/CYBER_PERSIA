@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/auth'
-import {checkout} from "@/checkout";
 import GuestLayout from "@/components/Layouts/GuestLayout";
 import Hero from "@/components/Hero";
 import About from "@/components/About/AboutGrid";
@@ -12,7 +11,7 @@ export default function Home() {
     return (
         <GuestLayout>
             <Head>
-                <title>Laravel</title>
+                <title>Cyber Persia</title>
             </Head>
 
             <Hero />
