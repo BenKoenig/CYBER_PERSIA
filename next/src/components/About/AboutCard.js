@@ -5,8 +5,8 @@ const AboutCard = ({title, desc}) => {
     return (
         <div className="group relative">
             
-            <div className="absolute w-10 ">
-                <svg viewBox="64 64 384 384"><path d="M448 224H288V64h-64v160H64v64h160v160h64V288h160z"></path></svg>
+            <div className="absolute w-8 right-0 z-10 fill-black transition-colors group-hover:fill-gray-400">
+                <svg className="translate-x-[50%] -translate-y-[50%]" viewBox="64 64 384 384"><path d="M448 224H288V64h-64v160H64v64h160v160h64V288h160z"></path></svg>
             </div>
 
             {/* Headline */}
