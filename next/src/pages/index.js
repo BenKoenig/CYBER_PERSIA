@@ -4,6 +4,9 @@ import { useAuth } from '@/hooks/auth'
 import GuestLayout from "@/components/Layouts/GuestLayout";
 import Hero from "@/components/Hero";
 import About from "@/components/About/AboutGrid";
+import GameTrailer from '@/components/GameTrailer';
+import ForumSection from '@/components/ForumSection';
+
 
 export default function Home() {
     const { user } = useAuth({ middleware: 'guest' })
@@ -16,6 +19,9 @@ export default function Home() {
 
             <Hero />
             <About />
+            <GameTrailer />
+            <ForumSection />
+
         </GuestLayout>
     )
 }
