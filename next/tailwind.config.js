@@ -17,6 +17,8 @@ module.exports = {
                 'sp-black': '#011526',
                 'dark-yellow': '#F5F001',
                 'light-beige': '#F6F6EB',
+                'bg-dark': '#262626',
+                'bg-light': '#3D3D3D',
             },
         },
     },
