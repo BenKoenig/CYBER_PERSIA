@@ -15,9 +15,13 @@
 }
 
 .main-title {
-    @apply uppercase font-bold text-5xl sm:text-6xl md:text-7xl pb-3 lg:pb-5 text-center;
+    @apply uppercase font-black text-5xl sm:text-6xl md:text-7xl pb-3 lg:pb-5 text-center;
 }
 
 .desc-title {
     @apply max-w-2xl text-center;
+}
+
+.hero-title {
+    @apply uppercase font-black text-5xl sm:text-6xl md:text-7xl lg:text-9xl pb-3 lg:pb-5 text-center;
 }

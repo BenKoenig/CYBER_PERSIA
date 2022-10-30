@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import Button from './Button'
+import PrimaryLink from './Shared/PrimaryLink'
 
 const ForumSection = () => {
     return (
         <>
-            <section className="py-20 md:py-32 px-5 ">
+            <section className="py-20 md:py-32 px-5 bg-dark text-white">
                 <div className="text-center relative mx-4 ">
-                    <div className="flex w-full flex-col items-center ">
+                    <div className="flex w-full flex-col items-center mb-10">
                         <h3 className="sub-title">Stay connected</h3>
                         <h2 className="main-title">Join our Forum</h2>
                         <h3 className="desc-title">
@@ -16,16 +16,21 @@ const ForumSection = () => {
                         </h3>
                     </div>
 
-                    <div className="max-w-md mx-auto p-5">
-                        <Image
-                            src="/images/placeholder-1.png"
-                            width={400}
-                            height={450}
-                            layout="responsive"
-                            className="object-fill"
-                        />
-                    </div>
-                    <Button className="bg-light-100">Forum</Button>
+                    
+                    <div className="flex justify-center">
+                        <div className="flex max-w-3xl w-full gap-x-3 items-center">
+                                <img
+                                    src="/images/placeholder-1.png"
+        
+                                    className="object-fill w-full h-full"
+                                />
+                            <PrimaryLink href="/" type="primary">Forum</PrimaryLink>
+
+                            </div>
+                        
+                        </div>
+                   
+
                 </div>
             </section>
         </>
