@@ -20,6 +20,7 @@ const Hero = () => {
 
             <div className="text-center relative text-white mx-4 flex flex-col items-center">
                 <p className="sub-title">Lorem ipsum dolar set</p>
+                <div className="title-line"></div>
                 <h1 className="hero-title">Cyber Persia</h1>
                 <h2 className="desc-title mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h2>
 

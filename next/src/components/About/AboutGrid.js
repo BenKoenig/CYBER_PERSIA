@@ -6,6 +6,7 @@ const Hero = () => {
         <section className="py-20 md:py-32 px-5 bg-dark">
             <div className="flex flex-col items-center pb-5 text-white">
                 <h3 className="sub-title">Lorem ipsum dolar set</h3>
+                <div class="title-line"></div>
                 <h2 className="main-title">About Cyber Persia</h2>
             </div>
  

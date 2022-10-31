@@ -11,7 +11,7 @@
 }
 
 .sub-title {
-    @apply tracking-widest uppercase pb-3 lg:pb-5 text-center;
+    @apply tracking-widest uppercase pb-3 lg:pb-4 text-center;
 }
 
 .main-title {
@@ -24,4 +24,8 @@
 
 .hero-title {
     @apply uppercase font-black text-5xl sm:text-6xl md:text-7xl lg:text-9xl pb-3 lg:pb-5 text-center;
+}
+
+.title-line {
+   @apply w-16 h-1 bg-dark-yellow mb-5
 }

@@ -19,7 +19,8 @@ module.exports = {
                 'dark-yellow': '#E2BA0F',
                 'light-beige': '#F6F6EB',
                 'dark': '#1D1D1D',
-                'light-gray': '#D9D9D9'
+                'light-gray': '#2B2B2B',
+                'lightest-gray': '#D9D9D9'
             },
         },
     },
